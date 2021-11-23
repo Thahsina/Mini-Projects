@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.body {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.container {
+    /* height: 100vh; */
+    /* background-color: rgb(245, 233, 233); */
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* border:5px solid blueviolet; */
+    
+}
+
+h1{
+    margin: 10px;
+    padding: 10px;
+    font-size: 3rem;
+    color: rgb(140, 203, 233);
+}
+
+
+.box{
+    padding: 10px;
+    margin: 20px;
+    height: 500px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(134, 63, 63); */
+    color: beige;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+    font-size: 70px;
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+    
+    
+}
+
+.box1{
+    /* height: 300px;
+    width: 500px; */
+    top: 30px;
+    left: 30px;
+    background-image: url(image1.jpg);
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+
+}
+
+.box2{
+    top: 0;
+    left: 0;
+    background-image: url(image2.jpg);
+}
+
+.box3{
+    top: 0;
+    left: 0;
+    background-image: url(image3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box4{
+    top: 0;
+    left: 0;
+    background-image: url(image4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box5{
+    top:-40px;
+    left:-50px;
+    background-image: url(image5.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.box6{
+    top: 0;
+    left: 0;
+    background-image: url(image6.PNG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box7{
+    top: 0;
+    left: 0;
+    background-image: url(image7.PNG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.box:nth-child(even){
+    transform: translateX(-400%);
+
+}
+
+.box.show{
+    transform: translateX(0);
+}
