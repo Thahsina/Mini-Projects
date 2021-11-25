@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@300&display=swap");
+
+:root {
+  --left-bg-color: rgba(204, 109, 109, 0.7);
+  --right-bg-color:rgba(43,43,43,0.7);
+  --hover-width-left:75%;
+  --hover-width-right:25%;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1{
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 20%;
+  top:20%;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.btn{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 30%;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  /* font-weight: bold; */
+  text-transform: uppercase;
+  border: 5px solid white;
+  padding: 6px;
+  width: 15rem;
+}
+
+
+.split.left .btn:hover {
+  background-color: rgb(90, 184, 90);
+  border-color: rgb(90, 184, 90);
+}
+
+.split.right .btn:hover {
+  background-color: rgb(87, 84, 236);
+  border-color: rgb(87,84,236);
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #333;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left: 0;
+  background: url(/images/Designer.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split.left::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--left-bg-color);
+}
+
+.split.right{
+  right: 0;
+  background-image: url(/images/Programmer\ Image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split.right::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--right-bg-color);
+}
+
+.hover-left .left {
+  width: var(--hover-width-left);
+}
+
+.hover-left .right {
+  width: var(--hover-width-right);
+}
+
+.hover-right .right {
+  width: var(--hover-width-left);
+}
+
+.hover-right .left {
+  width: var(--hover-width-right);
+}
+
+.split.right, .split.left, .split.right:before, .split.left:left {
+  transition: all 1000ms ease-in-out;
+}
+
+@media (max-width: 750px) {
+  h1{
+    font-size: 2rem;
+    top: 30%;
+    white-space: normal;
+  }
+
+  .btn{
+    padding: 1.2rem;
+    width: 12rem;
+  }
+}
