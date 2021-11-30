@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@200;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(6, 154, 240, 0.986);
+}
+
+h3{
+    color: white;
+    margin: 10px;
+}
+.container{
+    width: 500px;
+    padding: 20px 20px ;
+    text-align: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+textarea{
+    width: 420px;
+    height: 100px;
+    /* border: 1px solid black; */
+    border: none;
+    padding: 20px;
+    margin: 0 0 20px;
+    font-size: 16px;
+    font-family: inherit;
+ 
+}
+
+textarea:focus{
+    outline: 0;
+}
+
+.tag{
+    background-color: #f0932b;
+    border-radius: 30px;
+    padding:  10px 20px;
+    margin: 0 5px 10px 0;
+    display: inline-block;
+    font-size: 14px;
+    /* cursor: pointer; coz we are not gonna make choice here */
+}
+
+.tag.highlight {
+    background-color: #273c75;
+    color: white;
+}
