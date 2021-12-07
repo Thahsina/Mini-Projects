@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+}
+
+.slider-container{
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-slide{
+    
+    width: 35%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s ease;
+    
+}
+
+.left-slide > div{
+    /* immediate div in left-slide div the first div not all.======== to select all children elements of left-slide do .left-slide > * ---- * will select all children elemnts of that particular div */
+
+    /* height: 100vh; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.left-slide h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+    
+}
+
+.right-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.right-slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(177, 177, 177);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+}
+  
+button:hover {
+    color: #222;
+}
+
+.down-button{
+    transform: translateX(-100%);
+    border-radius: 5px 0 0 5px;
+
+}
+
+.up-button{
+    transform: translateY(-100%);
+    border-radius:0 5px 5px 0;
+}
+
+
